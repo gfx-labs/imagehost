@@ -9,6 +9,8 @@ RUN go mod download
 COPY *.go ./
 RUN go build -o /imagehost
 
+VOLUME ["/images"]
+
 EXPOSE 10110
 
 CMD ["/imagehost"]
